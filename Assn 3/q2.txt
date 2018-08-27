@@ -1,0 +1,99 @@
+REM [20 points] Populate the tables you created for the previous question with data. 
+REM Be careful about the order you populate the tables with data.
+
+REM INSERT INTO (table) (att1, att2, att3)
+REM VALUES('att1', 'att2', 'att3');
+
+REM EMPLOYEE TABLE *************************************
+insert into employee (employee_name, street, city)
+values ('Tara Walton', 'Sunmeadow', 'Nixa');
+
+insert into employee (employee_name, street, city)
+values ('Matthew Addler', 'National Ave', 'Springfield');
+
+insert into employee (employee_name, street, city)
+values ('Brent Eaves', 'Republic Rd', 'Nixa');
+
+insert into employee (employee_name, street, city)
+values ('Brad Light', 'North St', 'Springfield');
+
+insert into employee (employee_name, street, city)
+values ('Jordan Hadden', 'Main St', 'Ozark');
+
+insert into employee (employee_name, street, city)
+values ('Keith Cissell', 'Main St', 'Ozark');
+
+insert into employee (employee_name, street, city)
+values ('Lauren Hoehne', 'Ballet Rd', 'Springfield');
+
+insert into employee (employee_name, street, city)
+values ('Steven Senger', 'National Ave', 'Springfield');
+
+insert into employee
+values ('Tyson', 'National Ave', 'Springfield');
+
+
+REM COMPANY TABLE ***************************************
+insert into company (company_name, city)
+values ('MSU CSC', 'Springfield');
+
+insert into company (company_name, city)
+values ('Walmart', 'Nixa');
+
+insert into company (company_name, city)
+values ('First Bank Corporation', 'Springfield');
+
+insert into company (company_name, city)
+values ('Small Bank Corporation', 'Springfield');
+
+
+REM WORKS TABLE *****************************************
+insert into works (employee_name, company_name, salary)
+values ('Tara Walton', 'MSU CSC', 28000.00);
+
+insert into works (employee_name, company_name, salary)
+values ('Matthew Addler', 'Small Bank Corporation', 30000.00);
+
+insert into works (employee_name, company_name, salary)
+values('Brent Eaves', 'First Bank Corporation', 52000.00);
+
+insert into works (employee_name, company_name, salary)
+values ('Brad Light', 'First Bank Corporation', 20500.50);
+
+insert into works (employee_name, company_name, salary)
+values ('Jordan Hadden', 'Small Bank Corporation', 18500.00);
+
+insert into works (employee_name, company_name, salary)
+values ('Keith Cissell', 'Small Bank Corporation', 40500.00);
+
+insert into works (employee_name, company_name, salary)
+values ('Lauren Hoehne', 'First Bank Corporation', 25250.00);
+
+insert into works (employee_name, company_name, salary)
+values ('Steven Senger', 'MSU CSC', 30000.00);
+
+insert into works
+values ('Tyson', 'First Bank Corporation', 40000.00);
+
+
+REM MANAGES TABLE ****************************************
+insert into manages (employee_name, manager_name)
+values ('Tara Walton', 'Steven Senger');
+
+insert into manages (employee_name, manager_name)
+values ('Jordan Hadden', 'Steven Senger');
+
+insert into manages (employee_name, manager_name)
+values ('Keith Cissell', 'Brent Eaves');
+
+insert into manages (employee_name, manager_name)
+values ('Lauren Hoehne', 'Matthew Addler');
+
+insert into manages (employee_name, manager_name)
+values ('Brad Light', 'Matthew Addler');
+
+insert into manages
+values ('Matthew Addler', 'Tyson');
+
+insert into manages
+values ('Lauren Hoehne', 'Tyson');

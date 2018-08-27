@@ -1,0 +1,44 @@
+REM Consider the employee database of Figure 3.20, where the primary keys are underlined. Give an expression in SQL for each of the following queries.
+REM a. Find the names of all employees who work for “First Bank Corporation”.
+REM b. Find all employees in the database who live in the same cities as the companies for which they work.
+REM c. Find all employees in the database who live in the same cities and on the same streets as do their managers.
+REM d. Find all employees who earn more than the average salary of all employees of their company.
+REM e. Find the company that has the smallest payroll.*/
+
+
+REM a
+select employee_name
+from works
+where company_name = 'First Bank Corporation';
+
+REM b
+select employee.employee_name
+from employee, works, company
+where company.city = employee.city 
+	and employee.employee_name = works.employee_name 
+	and company.company_name = works.company_name;
+
+REM c
+create table #temp
+(name 	varchar(20),
+street 	varchar(20),
+city	varchar (15));
+
+insert into #temp
+select M.manager_name, street, city
+from manages M, employee E, 
+where E.employee_name = M.manager_name;
+
+select employee_name
+from employee 
+where street = ()
+		
+
+REM d
+select employee_name
+from works W
+where salary > (select avg(salary)
+		from works S
+		group by company_name)
+	and W.company_name = S.company_name;
+		
